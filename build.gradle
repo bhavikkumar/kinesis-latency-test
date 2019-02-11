@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'io.bhavik'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    runtimeOnly 'javax.xml.bind:jaxb-api'
+    runtimeOnly 'org.glassfish.jaxb:jaxb-runtime:2.3.0.1'
+    runtimeOnly 'org.glassfish:javax.json:1.1.2'
+    runtimeOnly 'org.eclipse:yasson:1.0.1'
+    implementation 'com.amazonaws:amazon-kinesis-producer:0.12.11'
+    implementation group: 'com.amazonaws', name: 'amazon-kinesis-client', version: '1.7.5'
+    implementation group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.13'
+}
